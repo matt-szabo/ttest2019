@@ -24,7 +24,7 @@ class TeamList extends Component {
        filterValue:''
       };
 
-      this.apiBaseUrl = "http://tempo-test.herokuapp.com/7d1d085e-dbee-4483-aa29-ca033ccae1e4/1/team/";
+      this.apiBaseUrl = "https://tempo-test.herokuapp.com/7d1d085e-dbee-4483-aa29-ca033ccae1e4/1/team/";
   }
 
   // onChange handler for input field that also filters and searches through the inital team list to create the list of names to display

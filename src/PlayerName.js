@@ -15,7 +15,7 @@ class PlayerName extends Component {
       this.state = {
        data:null
       };
-      this.apiBaseUrl = "http://tempo-test.herokuapp.com/7d1d085e-dbee-4483-aa29-ca033ccae1e4/1/user/";
+      this.apiBaseUrl = "https://tempo-test.herokuapp.com/7d1d085e-dbee-4483-aa29-ca033ccae1e4/1/user/";
    
   }
 
