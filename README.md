@@ -1,17 +1,23 @@
 # T Test
 
+## Usage
+
+The Home page loads the list of teams.
+Click on a team row to get its full player list.
+Click on List of Teams button to return to main page.
+
 ## Approach
 
 For this project I basically took the following approach to develop the solution:
 
-1. Setup components to view Team List and Player List from each team
-2. Create routes using React Router
-3. Create small component for individual player names
-4. Apply the input field filter on the team list
-5. Apply the input field filter on the player list for a team
-6. Add chained promises to PlayerList to retrieve full list of players at once for filter purposes
-7. Minor CSS enhancements
-8. Comments
+1. Setup components to view Team List and Player List from each team.
+2. Create routes using React Router.
+3. Create small component for individual player names.
+4. Apply the input field filter on the team list.
+5. Apply the input field filter on the player list for a team.
+6. Add chained promises to PlayerList to retrieve full list of players at once for filter purposes.
+7. Minor CSS enhancements.
+8. Comments.
 
 
 ## Key Files
