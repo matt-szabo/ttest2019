@@ -16,9 +16,11 @@ const divStyle = {
   textDecoration: 'none'
 };
 
+
+
 const Links = () => (
   <nav>
-       <NavLink style={divStyle} to="/"><Button>List of Teams</Button></NavLink>
+       <NavLink style={divStyle} to="/"><Button variant="contained" color="primary" >List of Teams</Button></NavLink>
   </nav>
 )
 
