@@ -5,8 +5,9 @@ import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
-import PlayerName from './PlayerName';
 import TextField from '@material-ui/core/TextField';
+import PlayerName from './PlayerName';
+
 
 
 
@@ -29,6 +30,9 @@ class PlayerList extends Component {
 
   }
 
+  // onChange handler for input field that also filters and searches through the full list of player names to create the list of names to display
+  // the initial list of namesToDisplay is based on the full list of memberNames
+  // before exiting the function the namesToDisplay state is set to represent the filtered list
 
 handleChange = (event) => {
 
@@ -38,16 +42,22 @@ handleChange = (event) => {
     return item.toLowerCase().search(
       event.target.value.toLowerCase()) !== -1;
   });
-  console.log(dataToDisplayTemp)
   this.setState({namesToDisplay: dataToDisplayTemp,filterValue:event.target.value});
 }
 
-
+// function that retrieves individual player data for their name
 getPlayerName = (id) => {
   let url2 = this.apiBaseUrlPlayer + id;
   return axios.get(url2)
 
 }
+
+
+// componentDidMount initial gets the team's data based on the props passed by react router's default 'match' prop
+// first async call sets the team data such as name and team lead, but also gets the list of team members to use in the 
+// second async call that retrieves the team member's name via a Promise.all call 
+// names of players are based on the values returned from the Promise as opposed to separate async calls for each name via the PlayerName component
+// PlayerName is only used for the Team Lead's name
 
   componentDidMount(){
 
@@ -84,9 +94,7 @@ getPlayerName = (id) => {
     .then(
           arraydata => {
 
-            let final = arraydata.map(x => x)
-            let final_names = final.map(x => x.data.name);
-      
+            let final_names = arraydata.map(x => x.data.name)      
             this.setState({memberNames:final_names,namesToDisplay:final_names})
 
           })

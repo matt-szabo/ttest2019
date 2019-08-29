@@ -2,6 +2,10 @@ import React, {Component} from 'react';
 import axios from 'axios';
 
 
+// Simple component used to retrieve an individual player's name
+// based on id passed to component via standard props
+
+
 
 class PlayerName extends Component { 
 

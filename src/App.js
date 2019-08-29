@@ -1,14 +1,16 @@
 import React, {Component} from 'react';
 import {BrowserRouter as Router,Route,NavLink} from 'react-router-dom';
+import Button from '@material-ui/core/Button';
 
 import TeamList from './TeamList';
 import PlayerList from './PlayerList';
-import PlayerName from './PlayerName';
-import Button from '@material-ui/core/Button';
-
 
 
 import './App.css';
+
+
+// App.js contains the route structure for the app 
+// also includes NavLink Button to allow navigation back to homepage
 
 
 const divStyle = {
@@ -35,7 +37,6 @@ class App extends Component {
         <Links />
         <Route exact path="/" component={TeamList} />
         <Route path="/team/:id" component={PlayerList}  />
-        <Route path="/player/:id" component={PlayerName}  />
 
     </Router>
     </div>
