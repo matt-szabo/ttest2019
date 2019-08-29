@@ -96,7 +96,7 @@ handleChange = (event) => {
             <TableBody style={{borderBottom: "none" }}>
                 {this.state.dataToDisplay.map((item,i) => (
                   <TableRow key={i}>
-                      <Link to={{pathname:`/team/${item.id}`}} style={{ textDecoration: 'none', :hover:{background-color:'red'} }}>
+                      <Link to={{pathname:`/team/${item.id}`}} style={{ textDecoration: 'none'}}>
                           <TableCell>{item.id}</TableCell>
                           <TableCell>{item.name}</TableCell>
                       </Link>

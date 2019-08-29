@@ -17,7 +17,6 @@ const divStyle = {
 };
 
 
-
 const Links = () => (
   <nav>
        <NavLink style={divStyle} to="/"><Button variant="contained" color="primary" >List of Teams</Button></NavLink>

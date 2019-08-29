@@ -1,7 +1,5 @@
 # T Test
 
-https://ttest2019.herokuapp.com
-
 ## Key Files
 
 ### PlayerList.js
